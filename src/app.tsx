@@ -13,23 +13,18 @@ const App = () => {
 
   // http://127.0.0.1:5001/
 
-
   useEffect(() => {
-    
-    initiateAuthentication()
-      
+    initiateAuthentication();
+
     //Redirect to accounts page if user is not logged in
-   
   }, [isLoading, loggedIn]);
 
   const initiateAuthentication = async () => {
-
     // if (!isLoading && !loggedIn) {
-      if (true) {
+    if (true) {
+      const queryOptions = { active: true, lastFocusedWindow: true };
+      const [tab] = await chrome.tabs.query(queryOptions);
 
-    const queryOptions = { active: true, lastFocusedWindow: true };
-    const [tab] = await chrome.tabs.query(queryOptions);
-   
       let returnUrl = tab.url;
 
       // provides current window location as the returnUrl upon login
@@ -37,19 +32,18 @@ const App = () => {
         url: `${VITE_ACCOUNTS_URL}/login?redirectURL=${returnUrl}`,
       });
     }
-    
   };
+
+  const handleLogin = () => { initiateAuthentication() };
 
   return isLoading || !loggedIn ? (
 
-   { isLoading && (
-    <div>Loading...</div> 
-    )}
+    <div>Loading...</div>
+    // <div>
+    //   {isLoading && <div>Loading...</div>}
 
-    <div>
-
-
-    </div>
+    //   {!loggedIn && <button onClick={handleLogin}></button>}
+    // </div>
   ) : (
     // <div> you are logged in </div>
 
