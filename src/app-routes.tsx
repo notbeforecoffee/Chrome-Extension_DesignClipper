@@ -11,15 +11,15 @@ import WebForm from './pages/webForm/Form';
 
 
 const AppRoutes = () => {
-const [fulhausSite, setFulhausSite ] = useState<boolean>(false)
+
 
   return (
     <Routes>
-      <LoginContext.Provider value={{fulhausSite, setFulhausSite}}>
+      {/* <LoginContext.Provider value={{fulhausSite, setFulhausSite}}> */}
 
-      {/* <Route index element={<WebForm />} />  */}
-      <Route index element= {fulhausSite ? <UnitTray /> : <WebForm />} />
-      </LoginContext.Provider>
+      <Route index element={<WebForm />} /> 
+      {/* <Route index element= {fulhausSite ? <UnitTray /> : <WebForm />} /> */}
+      {/* </LoginContext.Provider> */}
     
     </Routes>
   );

@@ -11,15 +11,34 @@ import openURL from "./utils/open-url";
 const App = () => {
   const [isLoading, loggedIn] = useLoginStatus();
   const { VITE_ACCOUNTS_URL, VITE_STUDIO_URL } = import.meta.env;
-  const { setFulhausSite } = useContext(LoginContext);
-  
+  // const { setFulhausSite } = useContext(LoginContext);
+
+  const [fulhausSite, setFulhausSite] = useState<boolean>(false);
 
   // http://127.0.0.1:5001/
 
+
+
   useEffect(() => {
     // initiateAuthentication();
+    isFulhausSite()
     //Redirect to accounts page if user is not logged in
   }, [isLoading, loggedIn]);
+
+
+  const isFulhausSite = async () => {
+
+    const pattern = /https:\/\/studio.fulhaus.com\/.*/;
+    const queryOptions = { active: true, lastFocusedWindow: true };
+    const [tab] = await chrome.tabs.query(queryOptions);
+  
+    let presentUrl = tab.url;
+     alert(tab.url)
+    if (pattern.test(presentUrl)) {
+      setFulhausSite(true);
+      alert(fulhausSite)
+    }
+  };
 
   const initiateAuthentication = async () => {
     // if (!isLoading && !loggedIn) {
@@ -29,9 +48,6 @@ const App = () => {
 
       let returnUrl = tab.url;
 
-      if (returnUrl === "https://[^]*studio.fulhaus.com/[^]*") {
-        setFulhausSite(true);
-      }
       // provides current window location as the returnUrl upon login
       openURL({
         url: `${VITE_ACCOUNTS_URL}/login?redirectURL=${returnUrl}`,

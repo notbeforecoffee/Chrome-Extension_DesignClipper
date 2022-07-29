@@ -1,9 +1,9 @@
 import { createContext } from 'react';
 
 interface ILoginContext {
-    fulhausSite: <SetStateAction<boolean>>;
-    setFulhausSite: <SetStateAction<boolean>>;
+    // fulhausSite: <SetStateAction<boolean>>;
+    // setFulhausSite: <SetStateAction<boolean>>;
 }
 
 
-export const LoginContext = createContext<ILoginContext | null>(null)
+export const LoginContext = createContext<ILoginContext | any>(null)
