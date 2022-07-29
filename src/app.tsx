@@ -14,12 +14,13 @@ const App = () => {
   // http://127.0.0.1:5001/
 
   useEffect(() => {
-    initiateAuthentication();
+    // initiateAuthentication();
 
     //Redirect to accounts page if user is not logged in
   }, [isLoading, loggedIn]);
 
   const initiateAuthentication = async () => {
+
     // if (!isLoading && !loggedIn) {
     if (true) {
       const queryOptions = { active: true, lastFocusedWindow: true };
@@ -38,12 +39,12 @@ const App = () => {
 
   return isLoading || !loggedIn ? (
 
-    <div>Loading...</div>
-    // <div>
-    //   {isLoading && <div>Loading...</div>}
+    // <div>Loading...</div>
+    <div>
+      {isLoading && <div>Loading...</div>}
 
-    //   {!loggedIn && <button onClick={handleLogin}></button>}
-    // </div>
+      {!loggedIn && <button onClick={handleLogin}></button>}
+    </div>
   ) : (
     // <div> you are logged in </div>
 
@@ -51,9 +52,6 @@ const App = () => {
       <AppRoutes />
     </MemoryRouter>
 
-    // <BrowserRouter>
-    //       <AppRoutes />
-    //   </BrowserRouter>
   );
 };
 
