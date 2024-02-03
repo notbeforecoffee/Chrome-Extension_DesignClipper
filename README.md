@@ -29,7 +29,7 @@ Please note, existing products CANNOT be edited via this app.
 
 To start this project:
 
-1. Configure the compnent Library registry
+1. Configure the component Library registry
 
     npm config set '@fulhaus:registry' https://node.bit.cloud
 
