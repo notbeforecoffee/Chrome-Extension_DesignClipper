@@ -14,20 +14,8 @@ const openURL = ({ url }: IOpenURL) => {
     // if (_window != null) {
     //   _window.focus();
     // }
-    
-   chrome.tabs.create({url})
-   
+   chrome.tabs.create({url}) 
   };
   
 
 export default openURL;
-
-// const openURL = ({ url, target = "replace" }: IOpenURL) => {
-  // let _window = null;
-  // if (target === "replace") _window = window.location.replace(url);
-  // if (target === "new") _window = window.open(url);
-  // if (_window != null) {
-  //   _window.focus();
-  // }
-  
-// };

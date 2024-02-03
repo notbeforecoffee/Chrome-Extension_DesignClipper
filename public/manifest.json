@@ -1,18 +1,51 @@
 {
   "name": "Fülhaus Design Clipper",
-  "description": "Giving Dangerous Tools to Designers!",
+  "description": "Empowering Designers With Fun and Dangerous Tools!",
   "version": "0.1.0",
   "manifest_version": 3,
 
   "action": {
-    "default_popup": "index.html",
-    "default_title": "Design Clipper"
-  }, 
-"permissions": [
-  "tabs",
-  "storage"
-  
-]
+    "default_title": "Fülhaus Design Clipper",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "32": "assets/icon32.png"
+    }
 
+  },
+  "background" : {
+    "service_worker": "background.js",
+    "service_worker.persistent":true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all-frames": true
+    }
+  ],
+
+  "web_accessible_resources": [
+    {"resources": ["index.html"],
+    "matches": ["<all_urls>"],
+    "extension_ids": ["innaglidmepeejplchgcpciiikboaaej"]
+  },
+  {"resources": ["assets/images/fhLogo.png"],
+  "matches": ["<all_urls>"]
+  }
+  ],
+
+  "permissions": [
+    "activeTab", 
+    "tabs", 
+    "storage",
+    "notifications"
+  ],
+
+  "icons": {
+    "16": "assets/icon16.png",
+    "32": "assets/icon32.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
 }
-

@@ -1,57 +1,85 @@
 /* global chrome */
-import { useEffect } from "react";
+
 import { MemoryRouter } from "react-router-dom";
-import AppRoutes from "./app-routes";
-import "./App.css";
-import useLoginStatus from "./hooks/use-login-status";
+
+import { Button } from "@fulhaus/react.components.button";
 
 import openURL from "./utils/open-url";
+import useLoginStatus from "./hooks/use-login-status";
+import AppRoutes from "./app-routes";
+import Logo from "../public/assets/images/fhLogo.png";
+
 
 const App = () => {
+
+  const { VITE_ACCOUNTS_URL } = import.meta.env;
+  
   const [isLoading, loggedIn] = useLoginStatus();
-  const { VITE_ACCOUNTS_URL, VITE_STUDIO_URL } = import.meta.env;
 
-  // http://127.0.0.1:5001/
-
-  useEffect(() => {
-    // initiateAuthentication();
-
-    //Redirect to accounts page if user is not logged in
-  }, [isLoading, loggedIn]);
-
+  
+  
   const initiateAuthentication = async () => {
+    if (!isLoading && !loggedIn) {
+      // if (true) {
 
-    // if (!isLoading && !loggedIn) {
-    if (true) {
-      const queryOptions = { active: true, lastFocusedWindow: true };
+      const queryOptions = { 
+        active: true, 
+        currentWindow: true 
+      };
       const [tab] = await chrome.tabs.query(queryOptions);
 
       let returnUrl = tab.url;
+      console.log('return url: ', tab.url)
 
       // provides current window location as the returnUrl upon login
       openURL({
         url: `${VITE_ACCOUNTS_URL}/login?redirectURL=${returnUrl}`,
+//         chrome.webNavigation.onCompleted:
+// chrome.webNavigation - Chrome Developers[^]
+
       });
     }
   };
 
-  const handleLogin = () => { initiateAuthentication() };
-
   return isLoading || !loggedIn ? (
-
-    // <div>Loading...</div>
-    <div>
+  // return isLoading || loggedIn ? (
+   
+    <div className="">
       {isLoading && <div>Loading...</div>}
 
-      {!loggedIn && <button onClick={handleLogin}></button>}
+      {!loggedIn && (
+        //  {loggedIn && (
+
+        <div>
+          <header className="bg-[#101828] w-full text-center text-white text-xl p-2">
+            Fülhaus Studio Clipper
+          </header>
+
+          <img 
+          className="w-1/3 m-auto my-20" 
+          src={Logo} 
+          alt="Fulhaus Logo" 
+          />
+
+          <div className="my-20">
+            <Button
+              variant={"filled"}
+              className={"m-auto rounded bg-[#101828]"}
+              onClick={initiateAuthentication}
+            >
+              Please Log In
+            </Button>
+            <p className="text-center mt-4 px-10">
+              You will be taken to the Fülhaus Accounts Login Page
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   ) : (
-    // <div> you are logged in </div>
-
     <MemoryRouter>
       <AppRoutes />
     </MemoryRouter>
-
   );
 };
 

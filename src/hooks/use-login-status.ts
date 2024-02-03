@@ -6,7 +6,7 @@ import useLocationSearch from "./use-location-search";
 
 
 const useLoginStatus = () => {
-  // const token = useLocationSearch('_fulhaus_token')
+  const token = useLocationSearch('_fulhaus_token')
   const [loading, setLoading] = useState<boolean>(true);
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
 

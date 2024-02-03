@@ -7,7 +7,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
   plugins: [react(), viteCommonjs(), tsconfigPaths()],
   server: {
-    port: 5001, //for local dev server
+    port: 4001, //for local dev server
   },
   resolve: {
     alias: {
@@ -15,4 +15,3 @@ export default defineConfig({
     },
   },
 });
-

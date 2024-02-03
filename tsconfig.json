@@ -14,8 +14,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": ["src"],
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {
+      // name_of_alias: [real_path_of_directory]
+      "@/*": ["src/*"],
+      "@api-requests/*": ["api-requests/*"],
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@pages/*": ["pages/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"]
+    }
+  }, 
+  "include": ["src", "src/pages/productForm/Form.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

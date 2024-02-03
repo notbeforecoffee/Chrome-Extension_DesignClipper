@@ -1,0 +1,90 @@
+@import url('//hello.myfonts.net/count/3cf3db');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Fonts */
+@font-face {
+  font-family: 'Moret-Book';
+  src: url('../assets/fonts/moret-book/font.woff2') format('woff2'),
+    url('../assets/fonts/moret-book/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'ParalucentText-Book';
+  src: url('../assets/fonts/paralucent-textbook/font.woff2') format('woff2'),
+    url('../assets/fonts/paralucent-textbook/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Paralucent-Medium';
+  src: url('../assets/fonts/paralucent-medium/font.woff2') format('woff2'),
+    url('../assets/fonts/paralucent-medium/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'ParalucentText-BookItalic';
+  src: url('../assets/fonts/paralucent-textbook-italic/font.woff2')
+      format('woff2'),
+    url('../assets/fonts/paralucent-textbook-italic/font.woff') format('woff');
+}
+/* Fonts */
+
+@layer base {
+  .image-cancel-icon {
+    @apply absolute top-1 right-1 z-10 text-alert-error cursor-pointer outline-none bg-transparent  m-0 p-0 font-bold hover:text-xl 
+  }
+  .image-element {
+   @apply min-w-[6rem] min-h-[6rem] w-[6rem] h-[6rem] object-contain border border-black object-center
+  }
+}
+
+/* Global css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: ParalucentText-Book, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-[#E5E5E5];
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+body {
+  height: calc(100% - 3rem);
+  width: 425px;
+}
+
+h1 {
+  font-family: Moret-Book, sans-serif;
+}
+
+@layer utilities {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  
+}
+
+
+/* Global css */
