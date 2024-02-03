@@ -4,7 +4,7 @@
 
 ## Intended Use
 
-This inernal tool is intended to give the Design Team at Fülhaus the ability to add the products directly to the database (making products immediately available for use in the Studio App), in the event that the products they wish to use are currently unavailable in Fülhaus Studio App catologue.
+This inernal tool is intended to give the Design Team at Fülhaus the ability to add the products directly to the database, making products immediately available for use in the Studio App, in the event that these items are currently unavailable in Fülhaus Studio App catologue.
 
 This tool is not available inside the Chrome Extension Store, as it is not intended for a public audience, and must be uploaded via the provided instructions.  It is only intended to be usable in a Chrome Web Browser, and has no compatibility, currently or planned, for any other browser.
 
