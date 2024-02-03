@@ -51,8 +51,6 @@ Builds the app in a suitable format to be uploaded in Chrome.\
 
 
 
-#### If the app does not launch after clicking on the icon, please refresh your page and try again, to ensure scripts load correctly.
-
 ---
 
 ## How to load the Clipper Extension
@@ -72,3 +70,6 @@ Builds the app in a suitable format to be uploaded in Chrome.\
 3. To pin an extension to Chrome, click the pushpin icon so that the icon turns blue. (To unpin an extension, click the pushpin icon so that the icon turns to a gray outline.)
 
 ---
+
+
+#### If the app does not launch after clicking on the icon, please refresh your page and try again, to ensure scripts load correctly.
