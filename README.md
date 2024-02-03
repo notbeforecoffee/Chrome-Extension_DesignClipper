@@ -31,10 +31,13 @@ To start this project:
 
 1. Configure the component Library registry
 
-    npm config set '@fulhaus:registry' https://node.bit.cloud
+    `npm config set '@fulhaus:registry' https://node.bit.cloud`
 
 2. In the project directory, run:
-    `npm install --legacy-peer-deps` = Installs dependencies
+
+    `npm install --legacy-peer-deps` 
+    
+ to install dependencies
 
 
 ---------- _Development_ ----------\
