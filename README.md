@@ -18,8 +18,8 @@ Please note, existing products CANNOT be edited via this app.
 - [Typescript](https://www.typescriptlang.org/)
 - [MongoDB](https://www.mongodb.com/)
 - [ReactJs](https://react.dev/)
-- [Bootstrapped with [vitejs](https://vitejs.dev/)
-- [Tailwind])(https://www.google.com/search?client=firefox-b-d&q=Tailwind)
+- [vitejs](https://vitejs.dev/)
+- [Tailwind](https://www.google.com/search?client=firefox-b-d&q=Tailwind)
 - [Fulhaus UI Library](https://bit.dev/fulhaus)
 - [Chrome](http://developer.chrome.com/extensions/)
 
