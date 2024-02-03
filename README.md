@@ -4,13 +4,14 @@
 
 ## Intended Use
 
-This inernal tool is intended to give the Design Team at Fülhaus the ability to add the products they need directly to our database (and thereby making these products available for use in the Studio App) manually, in the event that the vendor products they wish to use are currently unavailable in Fülhaus Studio App catologue.
+This inernal tool is intended to give the Design Team at Fülhaus the ability to add the products directly to the database (making products immediately available for use in the Studio App), in the event that the products they wish to use are currently unavailable in Fülhaus Studio App catologue.
 
-This tool is not available inside the Chrome Extension Store, as it is not intended for a public audience.  It is only intended to be usable in a Chrome Web Browser, and has no compatibility, currently or planned, for any other browser.
+This tool is not available inside the Chrome Extension Store, as it is not intended for a public audience, and must be uploaded via the provided instructions.  It is only intended to be usable in a Chrome Web Browser, and has no compatibility, currently or planned, for any other browser.
 
 The extension, once installed, can be accessed via the extension menu, and can be toggled on or off by clicking on the extension icon from your toolbar.  You may find it easier to pin the extension to to the toolbar, so that the icon is always visible.
 
 Please note, existing products CANNOT be edited via this app.  
+
 
 ## Relevant Tech
 
@@ -62,7 +63,7 @@ Builds the app in a suitable format to be uploaded in Chrome.\
 2. Visit chrome://extensions (by typing the address in the bar directly, or via omnibox or menu -> Tools -> Extensions).
 3. Enable Developer mode by ticking the checkbox in the upper-right corner.
 4. Click on the "Load unpacked extension..." button.
-5. Select the directory containing your unpacked extension (the folder created during build, called dist).
+5. Select the directory containing your unpacked extension (the folder created during build, called dist) - this is the folder that must be provided to designers wishing to use the app, and must be redistrubuted to the Design Team after any app updates).
 
 ### How to Pin Extensions in Chrome
 
