@@ -40,8 +40,8 @@ To start this project:
 ---------- _Development_ ----------\
 `npm run dev` - Starts server in development \
 Runs the server in the development mode.\
-Open [http://localhost:4001](http://localhost:4001) to see if the app is up and running.
-It will be helpful to frequently use the instructions below to load the extenstion, and verify functionality, as many functions cannot be tested using LiveServer
+Open [http://localhost:4001](http://localhost:4001) to see if the app is up and running. \
+It will be helpful to frequently use the instructions below to load the extenstion, and verify functionality, as many functions cannot be tested  on local host \
 ---------- _Development_ ----------\
 
 ---------- _Production_ ----------\
