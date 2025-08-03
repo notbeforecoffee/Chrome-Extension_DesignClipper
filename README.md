@@ -1,3 +1,7 @@
+The databases, endpoints and other sensitive datapoints referenced in here are no longer active or relevant; this a record only  :)
+
+---
+
 # Fülhaus DesignClipper
 
 >Empowering Designers With Fun and Dangerous Tools!
